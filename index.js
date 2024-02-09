@@ -3,9 +3,10 @@ import {} from "dotenv/config";
 //import express
 import express from "express";
 import initApp from "./src/modules/app.router.js";
-
+import cors from "cors";
 //create the app function
 const app = express();
+app.use(cors);
 // create a PORT variable and get the value from .env file or the default is 3000
 const PORT = process.env.PORT || 3000;
 
